@@ -17,9 +17,13 @@ module.exports = {
           "0%": { backdropFilter: "blur(0px)" },
           "100%": { backdropFilter: "blur(8px)" },
         },
+        marquee: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
       },
       animation: {
-        "blur-in": "blurIn 1s ease-out forwards",
+        marquee: "marquee 10s linear infinite",
       },
     },
   },

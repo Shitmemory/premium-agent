@@ -41,9 +41,10 @@ export const Navbar = () => {
           relative uppercase text-base tracking-wide py-2
           ${isActive ? "text-black" : "text-gray-600"}
           hover:text-black
-          after:absolute after:left-0 after:bottom-[-16px] after:w-full after:h-[2px]
+          after:absolute after:left-0 after:w-full after:h-[2px]
           after:origin-left after:bg-black
           after:transition-transform after:duration-300
+          after:bottom-[-10px] sm:after:bottom-[-8px] md:after:bottom-[-16px]
           ${showUnderline ? "after:scale-x-100" : "after:scale-x-0"}
         `}
       >
@@ -83,9 +84,10 @@ export const Navbar = () => {
               relative uppercase text-lg sm:text-xl font-bold tracking-widest py-2
               ${pathname === "/" ? "text-black" : "text-gray-600"}
               hover:text-black
-              after:absolute after:left-0 after:bottom-[-14px] after:h-[2px] after:w-full
+              after:absolute after:left-0 after:h-[2px] after:w-full
               after:origin-left after:bg-black
               after:transition-transform after:duration-300
+              after:bottom-[-6px] sm:after:bottom-[-6px] md:after:bottom-[-14px]
               ${
                 (pathname === "/" && hoveredLink === null) ||
                 hoveredLink === "/"
