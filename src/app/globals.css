@@ -16,6 +16,9 @@
 html,
 body {
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialised;
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -24,4 +27,8 @@ body {
       margin-top: 10px; /* or padding-top, adjust this */
     }
   }
+}
+
+:root {
+  --vh: 200%;
 }
