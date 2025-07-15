@@ -96,19 +96,11 @@ const HeroSection = ({ scrollTargetRef, videoRef, ready }: HeroProps) => {
 
       {/* Chevron Scroll Button */}
       <div
-        className="
-    absolute 
-    left-1/2 
-    -translate-x-1/2 
-    z-30 
-    animate-bounce 
-    text-white 
-    text-3xl 
-    hover:text-gray-300 
-    transition 
-    cursor-pointer
-    bottom-[98px] sm:bottom-[64px] md:bottom-[88px] lg:bottom-[120px]
-  "
+        className="absolute left-1/2 -translate-x-1/2 z-30 animate-bounce text-white text-3xl hover:text-gray-300 transition cursor-pointer"
+        style={{
+          bottom:
+            "calc(env(safe-area-inset-bottom, 0px) + calc(var(--vh, 1vh) * 17))",
+        }}
       >
         <button onClick={scrollToNext} className="cursor-pointer">
           <HiChevronDown size={39} />
