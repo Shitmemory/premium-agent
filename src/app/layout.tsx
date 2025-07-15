@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
-import { ClientWrapper } from "@/components/client-wrapper"; // 👈 import it
+import { ClientWrapper } from "@/components/client-wrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +26,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* ✅ This actually injects preload styles into the document head */}
+        <link rel="preload" href="/_next/static/css/app.css" as="style" />
+        <link rel="stylesheet" href="/_next/static/css/app.css" />
+        {/* You can also preload fonts here */}
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

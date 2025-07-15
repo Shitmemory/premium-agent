@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { HiChevronDown } from "react-icons/hi";
 import CTAButton from "../cta-button";
+import { useAutoResumeVideo } from "@/hooks/useAutoResumeVideo";
 
 interface HeroProps {
   scrollTargetRef: React.RefObject<HTMLDivElement | null>;
@@ -11,6 +12,7 @@ interface HeroProps {
 }
 
 const HeroSection = ({ scrollTargetRef, videoRef, ready }: HeroProps) => {
+  // useAutoResumeVideo(videoRef ); // potentially remove this
   const scrollToNext = () => {
     if (scrollTargetRef.current) {
       scrollTargetRef.current.scrollIntoView({ behavior: "smooth" });
@@ -19,8 +21,8 @@ const HeroSection = ({ scrollTargetRef, videoRef, ready }: HeroProps) => {
 
   return (
     <section
-      className="relative w-full flex flex-col justify-between overflow-hidden snap-start safari-hero-offset"
-      style={{ height: "calc(var(--vh, 1vh) * 100)", minHeight: "100vh" }}
+      className="relative min-h-[100svh] flex flex-col justify-between overflow-hidden snap-start"
+      style={{ height: "calc(var(--vh, 1vh) * 100)" }}
     >
       {/* Background Video */}
       <video
@@ -99,7 +101,7 @@ const HeroSection = ({ scrollTargetRef, videoRef, ready }: HeroProps) => {
         className="absolute left-1/2 -translate-x-1/2 z-30 animate-bounce text-white text-3xl hover:text-gray-300 transition cursor-pointer"
         style={{
           bottom:
-            "calc(env(safe-area-inset-bottom, 0px) + calc(var(--vh, 1vh) * 23))",
+            "calc(env(safe-area-inset-bottom, 0px) + calc(var(--vh, 1vh) * 9))",
         }}
       >
         <button onClick={scrollToNext} className="cursor-pointer">
