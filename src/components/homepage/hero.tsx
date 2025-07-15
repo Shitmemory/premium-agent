@@ -107,7 +107,7 @@ const HeroSection = ({ scrollTargetRef, videoRef, ready }: HeroProps) => {
     hover:text-gray-300 
     transition 
     cursor-pointer
-    bottom-[48px] sm:bottom-[64px] md:bottom-[88px] lg:bottom-[120px]
+    bottom-[98px] sm:bottom-[64px] md:bottom-[88px] lg:bottom-[120px]
   "
       >
         <button onClick={scrollToNext} className="cursor-pointer">
