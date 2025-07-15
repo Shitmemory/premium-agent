@@ -17,3 +17,11 @@ html,
 body {
   overflow-x: hidden;
 }
+
+@supports (-webkit-touch-callout: none) {
+  @media not all and (min-resolution: 0.001dpcm) {
+    .safari-hero-offset {
+      margin-top: 40px; /* or padding-top, adjust this */
+    }
+  }
+}

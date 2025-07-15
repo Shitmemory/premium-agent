@@ -19,7 +19,7 @@ const HeroSection = ({ scrollTargetRef, videoRef, ready }: HeroProps) => {
 
   return (
     <section
-      className="relative w-full flex flex-col justify-between overflow-hidden snap-start"
+      className="relative w-full flex flex-col justify-between overflow-hidden snap-start safari-hero-offset"
       style={{ height: "calc(var(--vh, 1vh) * 100)", minHeight: "100vh" }}
     >
       {/* Background Video */}
